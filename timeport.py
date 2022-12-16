@@ -6,7 +6,7 @@ import fire
 # To make this work with fire, I had to add the underscore. Thanks
 # ChatGPT!
 def timeport(time, from_="UTC", to="UTC"):
-    return (time, from_, to)
+    return time - timezones.timezones[from_] + timezones.timezones[to]
 
 if __name__ == "__main__":
     fire.Fire(timeport)
