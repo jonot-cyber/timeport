@@ -41,6 +41,7 @@ def timeport(time: str, from_="UTC", to="UTC"):
     if to in ambiguous_timezones:
         timezone_warning(to)
     time_num = 0
+    time = str(time)
     time = time.lower()
     if time.endswith("pm"):
         time_num = int(time[:time.find("pm")]) + 12
