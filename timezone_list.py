@@ -193,3 +193,20 @@ timezones = {
     "YAKT": 9,
     "YEKT": 5,
 }
+
+# These abbreviations refer to multiple timezones, or there are multiple with the same abbreviation
+# I thought that these would be more organized before starting this.
+ambiguous_timezones = {
+    "ACT",
+    "AST",
+    "BST",
+    "CDT",
+    "CT",
+    "ECT",
+    "ET",
+    "GST",
+    "IST",
+    "LHST",
+    "MST",
+    "SST",
+}
