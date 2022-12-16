@@ -25,9 +25,7 @@ def convert_time(time):
     output += " am" if am else " pm"
     return output
 
-# You can't use "from" as an argument because it's a reserved keyword
-# To make this work with fire, I had to add the underscore. Thanks
-# ChatGPT!
+# Since from is a reserved keyword, I can't use it
 def timeport(time: str, from_="UTC", to="UTC"):
     time_num = 0
     time = time.lower()
