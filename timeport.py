@@ -11,6 +11,9 @@ def convert_time(time):
     while time > 12:
         time -= 12
         am = not am
+    if time < 0:
+        time += 12
+        am = not am
     output += str(int(time))
     time -= int(time)
     match time:
@@ -29,6 +32,7 @@ def timezone_warning(timezone):
     """Warn that a timezone abbreviation is ambiguous"""
     print(f"WARNING: The abbreviation {timezone} could refer to multiple different timezones.")
     print("Take the result with a grain of salt, and double check somewhere else")
+    print()
 
 # Since from is a reserved keyword, I can't use it
 def timeport(time: str, from_="UTC", to="UTC"):
